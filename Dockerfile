@@ -15,4 +15,4 @@ COPY --from=build /app/docs ./docs
 
 ENV NODE_ENV=production
 EXPOSE 3000
-CMD ["node", "dist/entrypoints/web.js"]
+CMD ["node", "dist/src/entrypoints/web.js"]

@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    command: ["node", "dist/entrypoints/web.js"]
+    command: ["node", "dist/src/entrypoints/web.js"]
     env_file: .env
     depends_on:
       postgres:
@@ -16,7 +16,7 @@ services:
 
   telegram:
     build: .
-    command: ["node", "dist/entrypoints/telegram.js"]
+    command: ["node", "dist/src/entrypoints/telegram.js"]
     env_file: .env
     depends_on:
       postgres:
@@ -24,7 +24,7 @@ services:
 
   scheduler:
     build: .
-    command: ["node", "dist/entrypoints/scheduler.js"]
+    command: ["node", "dist/src/entrypoints/scheduler.js"]
     env_file: .env
     depends_on:
       postgres:
