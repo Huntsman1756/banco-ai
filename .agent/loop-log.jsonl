@@ -1,0 +1,16 @@
+{"ts":"2026-06-16T00:00:00Z","event":"init","task_id":"BOOT-001","status":"started","details":"Project loop governance scaffold created."}
+{"ts":"2026-06-16T09:12:00Z","event":"task_complete","task_id":"F-1-T01","status":"done","notes":"Scaffold files added."}
+{"ts":"2026-06-16T09:13:00Z","event":"task_complete","task_id":"F-1-T02","status":"done","notes":"Loop documentation added."}
+{"ts":"2026-06-16T09:14:00Z","event":"task_complete","task_id":"F-1-T03","status":"done","notes":"Architecture and security docs added."}
+{"ts":"2026-06-16T10:04:00Z","event":"task_complete","task_id":"F-2-T01","status":"done","notes":"Shared redaction/logger utilities added."}
+{"ts":"2026-06-16T10:04:00Z","event":"task_complete","task_id":"F-2-T02","status":"done","notes":"Domain placeholders and tests added."}
+{"ts":"2026-06-16T10:05:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm run typecheck"}
+{"ts":"2026-06-16T10:05:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm run lint"}
+{"ts":"2026-06-16T10:05:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm test"}
+{"ts":"2026-06-16T10:05:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm run db:generate"}
+{"ts":"2026-06-16T10:08:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm run typecheck"}
+{"ts":"2026-06-16T10:08:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm run lint"}
+{"ts":"2026-06-16T10:08:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm test"}
+{"ts":"2026-06-16T10:08:00Z","event":"check","task_id":"F-3-T01","status":"passed","command":"npm run db:generate"}
+{"ts":"2026-06-16T10:08:00Z","event":"check","task_id":"F-3-T01","status":"blocked","command":"npm run db:migrate","details":"migrate command hangs without completing in this local environment"}
+{"ts":"2026-06-16T06:08:20.834Z","event":"task_selected","task_id":"F-3-T01","status":"running"}
