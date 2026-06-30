@@ -1,5 +1,8 @@
-import { logger } from "../shared/logger";
-import { createInfrastructureServices } from "../infrastructure";
+﻿import { logger } from "../shared/logger.js";
+import { createInfrastructureServices } from "../infrastructure/index.js";
+import { closeDbPool } from "../db/client.js";
+
+const SCHEDULER_ENABLED = (process.env.SCHEDULER_ENABLED ?? "false").toLowerCase().trim() === "true";
 
 const MILLISECONDS_IN_SECOND = 1000;
 const DAYS_IN_WEEK = 7;
@@ -76,6 +79,14 @@ function createSchedulerDeps(): SchedulerDeps {
 }
 
 export function startSchedulerEntrypoint(deps: SchedulerDeps = createSchedulerDeps()): void {
+  if (!SCHEDULER_ENABLED) {
+    logger.info("scheduler start skipped", {
+      entrypoint: "scheduler",
+      reason: "SCHEDULER_ENABLED is false",
+    });
+    return;
+  }
+
   const runOnStart = process.env.SCRAPER_STARTUP_RUN === "true";
 
   const runLoop = async (): Promise<void> => {
@@ -124,5 +135,14 @@ export function startSchedulerEntrypoint(deps: SchedulerDeps = createSchedulerDe
 
   void runLoop();
 }
+
+const shutdown = async (): Promise<void> => {
+  logger.info("scheduler shutting down", { entrypoint: "scheduler" });
+  await closeDbPool();
+  process.exit(0);
+};
+
+process.on("SIGTERM", () => void shutdown());
+process.on("SIGINT", () => void shutdown());
 
 startSchedulerEntrypoint();

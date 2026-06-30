@@ -1,8 +1,10 @@
-import { logger } from "../shared/logger";
+﻿import { logger } from "../shared/logger.js";
 import { createServer } from "node:http";
-import { createWebApp } from "../web";
+import { Readable } from "node:stream";
+import { createWebApp } from "../web/index.js";
 import type { IncomingMessage, ServerResponse } from "node:http";
-import { createInfrastructureServices, type InfrastructureServices } from "../infrastructure";
+import { createInfrastructureServices, type InfrastructureServices } from "../infrastructure/index.js";
+import { closeDbPool } from "../db/client.js";
 
 type WebEntrypointDeps = {
   loadLatestScrapeState: InfrastructureServices["scraper"]["loadLatestScrapeState"];
@@ -38,10 +40,17 @@ export function startWebEntrypoint(): void {
       }
     });
 
-    const req = new Request(url, {
+    const hasRequestBody = nodeReq.method !== "GET" && nodeReq.method !== "HEAD";
+    const requestInit: RequestInit & { duplex?: "half" } = {
       method: nodeReq.method,
       headers,
-    });
+    };
+    if (hasRequestBody) {
+      requestInit.body = Readable.toWeb(nodeReq) as ReadableStream;
+      requestInit.duplex = "half";
+    }
+
+    const req = new Request(url, requestInit);
 
     void handleRequest(app, req)
       .then(async (upstream) => {
@@ -71,6 +80,25 @@ export function startWebEntrypoint(): void {
       status: "listening",
     });
   });
+
+  const shutdown = async (signal: string): Promise<void> => {
+    logger.info(`received ${signal}, shutting down gracefully`, {
+      entrypoint: "web",
+    });
+    server.close(async () => {
+      await closeDbPool();
+      logger.info("web server closed", { entrypoint: "web" });
+      process.exit(0);
+    });
+    setTimeout(() => {
+      logger.error("force shutdown after 10s timeout", { entrypoint: "web" });
+      void closeDbPool();
+      process.exit(1);
+    }, 10000);
+  };
+
+  process.on("SIGTERM", () => void shutdown("SIGTERM"));
+  process.on("SIGINT", () => void shutdown("SIGINT"));
 }
 
 startWebEntrypoint();
