@@ -1,15 +1,19 @@
 # Banco AI
 
-Banco AI is a deterministic banking product comparison system with:
+Banco AI is a web-only informational banking product comparison system.
 
-- Web interface (Hono + HTMX)
-- Telegram bot (grammY)
-- Product ranking over approved versions only
-- Regulatory guardrails against investment advice
-- PDF document upload and comparison pipeline
-- Scraper with manual review
+It supports:
 
-## Running locally
+- Web interface with deterministic ranking.
+- Manual ingestion of public bank-account/deposit conditions.
+- PDF assistant for reviewing banking conditions.
+- Product ranking over approved versions only.
+- Regulatory guardrails against investment advice.
+- Optional scraper/manual review workflows.
+
+It runs as a single web App.
+
+## Local Workflow
 
 1. Copy environment variables:
 
@@ -31,38 +35,71 @@ npm run lint
 npm test
 ```
 
-## Working mode
+## Manual Product Data
 
-This repository is driven by `.agent/queue.json` and the loop documentation in `docs/loops/*`.
-
-Task selection and progression are controlled by state files in `.agent/`.
-
-## Deployment to NaN Cloud
-
-### 1) App deploy (HTTP)
-
-1. Select the branch you want to deploy (for example `main`).
-2. In NaN Cloud, create/connect your `Space` and create an App.
-3. Connect this GitHub repo and repository branch.
-4. Use `Dockerfile` at repository root.
-5. Enable `Expose over HTTP` and set port `3000`.
-6. Set environment variables in NaN Cloud (`build/env`), especially:
+Public bank information copied into `docs/Cuentas remuneradas ...` is converted
+into product candidates with:
 
 ```bash
-NODE_ENV=production
-PORT=3000
-OPENAI_BASE_URL=https://api.nan.builders/v1
-NAN_MODEL=qwen3.6
+npm run import:conditions:sin
+npm run import:conditions:con
+npm run import:conditions:pending -- --manifest data/incoming-doc-candidates.json --dry-run
+npm run import:conditions:pending -- --manifest data/incoming-doc-candidates.json
 ```
 
-Optional vars in runtime:
+The deployed web App reads the committed catalog at:
 
-- `OPENAI_API_KEY` (production secret)
-- `DATABASE_URL`
-- `TELEGRAM_BOT_TOKEN` (if Telegram worker is launched in another app)
+```text
+data/manual-product-conditions.json
+```
 
-The `/health` endpoint is available for readiness checks.
+The normal publishing flow is:
 
-### 2) Note on repository artifacts
+1. Add/copy source information locally.
+2. Generate/import candidates.
+3. Review and approve what should be public.
+4. Commit the updated data file.
+5. Push to GitHub so NaN Cloud rebuilds the App.
 
-`data/scrape/` is ignored in git and `node_modules/`/`dist/` are not committed, so the image is built cleanly from source every deploy.
+## Deployment to NaN Cloud Basic
+
+Create one HTTP App in your Space:
+
+- Repository: this GitHub repo.
+- Dockerfile: `Dockerfile` at repository root.
+- Expose over HTTP: enabled.
+- Port: `3000`.
+- Replicas: `1` while using the in-process NAN limiter.
+- Start without persistent storage for the initial MVP.
+- Use `.env.nan.example` as the environment variable checklist.
+
+Required runtime secrets:
+
+```bash
+NAN_API_KEY=...
+SESSION_SECRET=...
+ADMIN_REVIEW_TOKEN=...
+```
+
+Optional:
+
+```bash
+DATABASE_URL=...
+```
+
+Leave `DATABASE_URL` empty on Basic if the first production version should run
+from the file-backed catalog only.
+
+For local development, the LLM client can fall back to an `opencode.json`
+provider configuration if `NAN_API_KEY` is not set. Do not commit that file.
+
+Health check:
+
+```text
+/health
+```
+
+## Working Mode
+
+This repository is driven by `.agent/queue.json` and the loop documentation in
+`docs/loops/*`.
