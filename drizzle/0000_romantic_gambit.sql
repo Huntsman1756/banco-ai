@@ -65,7 +65,6 @@ CREATE TABLE "products" (
 CREATE TABLE "recommendations" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"user_id" integer,
-	"telegram_chat_id" numeric,
 	"input_json" jsonb NOT NULL,
 	"ranked_products_json" jsonb NOT NULL,
 	"assumptions_json" jsonb,
@@ -102,19 +101,6 @@ CREATE TABLE "sources" (
 	"created_at" timestamp with time zone DEFAULT now() NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE "telegram_users" (
-	"id" serial PRIMARY KEY NOT NULL,
-	"user_id" integer,
-	"telegram_id" numeric NOT NULL,
-	"chat_id" numeric NOT NULL,
-	"username" text,
-	"first_name" text,
-	"last_name" text,
-	"is_admin" boolean DEFAULT false,
-	"linked_at" timestamp with time zone DEFAULT now() NOT NULL,
-	CONSTRAINT "telegram_users_telegram_id_unique" UNIQUE("telegram_id")
-);
---> statement-breakpoint
 CREATE TABLE "uploaded_documents" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"user_id" integer,
@@ -133,7 +119,7 @@ CREATE TABLE "uploaded_documents" (
 --> statement-breakpoint
 CREATE TABLE "users" (
 	"id" serial PRIMARY KEY NOT NULL,
-	"email" text NOT NULL,
+	"email" text,
 	"password_hash" text,
 	"role" text DEFAULT 'user' NOT NULL,
 	"created_at" timestamp with time zone DEFAULT now() NOT NULL,
@@ -148,6 +134,6 @@ ALTER TABLE "products" ADD CONSTRAINT "products_source_id_sources_id_fk" FOREIGN
 ALTER TABLE "recommendations" ADD CONSTRAINT "recommendations_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "recommendations" ADD CONSTRAINT "recommendations_disclaimer_id_disclaimers_id_fk" FOREIGN KEY ("disclaimer_id") REFERENCES "public"."disclaimers"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "scrape_runs" ADD CONSTRAINT "scrape_runs_source_id_sources_id_fk" FOREIGN KEY ("source_id") REFERENCES "public"."sources"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
-ALTER TABLE "telegram_users" ADD CONSTRAINT "telegram_users_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
 ALTER TABLE "uploaded_documents" ADD CONSTRAINT "uploaded_documents_user_id_users_id_fk" FOREIGN KEY ("user_id") REFERENCES "public"."users"("id") ON DELETE no action ON UPDATE no action;--> statement-breakpoint
-CREATE INDEX "product_versions_one_current_approved" ON "product_versions" USING btree ("product_id") WHERE valid_to IS NULL AND status = 'approved';
+CREATE UNIQUE INDEX "product_versions_one_current_approved" ON "product_versions" USING btree ("product_id") WHERE valid_to IS NULL AND status = 'approved';--> statement-breakpoint
+CREATE UNIQUE INDEX "products_bank_name_kind" ON "products" USING btree ("bank","name","kind");
