@@ -1,5 +1,4 @@
 import {
-  bigint,
   boolean,
   integer,
   jsonb,
@@ -18,18 +17,6 @@ export const users = pgTable("users", {
   password_hash: text("password_hash"),
   role: text("role").notNull().default("user"),
   created_at: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
-});
-
-export const telegramUsers = pgTable("telegram_users", {
-  id: serial("id").primaryKey(),
-  user_id: integer("user_id").references(() => users.id),
-  telegram_id: bigint("telegram_id", { mode: "bigint" }).notNull().unique(),
-  chat_id: bigint("chat_id", { mode: "bigint" }).notNull(),
-  username: text("username"),
-  first_name: text("first_name"),
-  last_name: text("last_name"),
-  is_admin: boolean("is_admin").default(false),
-  linked_at: timestamp("linked_at", { withTimezone: true }).defaultNow().notNull(),
 });
 
 export const sources = pgTable("sources", {
@@ -144,7 +131,6 @@ export const disclaimers = pgTable("disclaimers", {
 export const recommendations = pgTable("recommendations", {
   id: serial("id").primaryKey(),
   user_id: integer("user_id").references(() => users.id),
-  telegram_chat_id: bigint("telegram_chat_id", { mode: "bigint" }),
   input_json: jsonb("input_json").notNull(),
   ranked_products_json: jsonb("ranked_products_json").notNull(),
   assumptions_json: jsonb("assumptions_json"),

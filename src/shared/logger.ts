@@ -1,5 +1,5 @@
 import { inspect } from "node:util";
-import { redactObject } from "./redaction";
+import { redactObject } from "./redaction.js";
 
 type LogLevel = "info" | "warn" | "error";
 
@@ -8,7 +8,11 @@ type LoggerContext = Record<string, unknown>;
 function write(level: LogLevel, message: string, context: LoggerContext = {}): void {
   const safeContext = redactObject(context);
   const line = `[${new Date().toISOString()}] ${level.toUpperCase()} ${message} ${inspect(safeContext)}`;
-  console.log(line);
+  if (level === "error") {
+    console.error(line);
+  } else {
+    console.log(line);
+  }
 }
 
 export const logger = {
