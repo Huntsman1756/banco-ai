@@ -1,50 +1,60 @@
-import {
-  getScrapeTargets,
-  MARKET_SNAPSHOT_2026_06_12,
-} from "../src/data/market-snapshot-2026-06-12";
-import { logger } from "../src/shared/logger";
+import { createDbClient } from "../src/db/client.js";
+import { disclaimers } from "../src/db/schema.js";
 
-type SectionStats = {
-  section: string;
-  count: number;
-};
+async function seed() {
+  console.log("Connecting to database...");
+  const db = createDbClient();
+  console.log("Connected.");
 
-function buildSectionStats() {
-  const bySection = new Map<string, number>();
-  for (const offer of MARKET_SNAPSHOT_2026_06_12.offers) {
-    bySection.set(offer.section, (bySection.get(offer.section) ?? 0) + 1);
+  // ─── Check existing disclaimers ─────────────────────────────
+  const disclaimerRows = await db.select({ version: disclaimers.version }).from(disclaimers);
+  const existingVersions = disclaimerRows.map((r) => r.version);
+  console.log(`Found ${existingVersions.length} existing disclaimers.`);
+
+  // ─── Default disclaimers ────────────────────────────────────
+  const defaultDisclaimers: Array<{ version: number; context: string; text: string }> = [
+    {
+      version: 1,
+      context: "comparison",
+      text: "Esta herramienta presenta una comparativa informativa de productos bancarios basada en datos públicos. No constituye asesoramiento financiero personalizado. El usuario es responsable de verificar las condiciones directamente con la entidad bancaria antes de contratar cualquier producto.",
+    },
+    {
+      version: 2,
+      context: "pdf_analysis",
+      text: "El análisis de documentos PDF se realiza de forma automática con resultados orientativos. Las condiciones financieras pueden variar. Se recomienda consultar las condiciones oficiales publicadas por la entidad bancaria.",
+    },
+    {
+      version: 3,
+      context: "regulatory_blocking",
+      text: "Banco AI solo presenta comparativas informativas de productos bancarios básicos (cuentas y depósitos). No ofrece asesoramiento de inversión, acciones, fondos, criptoactivos ni productos derivados.",
+    },
+  ];
+
+  let inserted = 0;
+  let skipped = 0;
+
+  for (const d of defaultDisclaimers) {
+    if (!existingVersions.includes(d.version)) {
+      await db.insert(disclaimers).values({
+        version: d.version,
+        context: d.context,
+        text: d.text,
+        active: true,
+      });
+      console.log(`Inserted disclaimer v${d.version}: ${d.context}`);
+      inserted++;
+    } else {
+      console.log(`Disclaimer v${d.version} (${d.context}) already exists, skipping`);
+      skipped++;
+    }
   }
-  return Array.from(bySection.entries())
-    .sort((a, b) => a[0].localeCompare(b[0]))
-    .map(([section, count]) => ({ section, count } satisfies SectionStats));
+
+  console.log(`Seed completed: ${inserted} new, ${skipped} skipped.`);
 }
 
-function printReadable() {
-  const sectionStats = buildSectionStats();
-  const sources = getScrapeTargets();
-  const needsVerification = MARKET_SNAPSHOT_2026_06_12.offers.filter((offer) => (offer as { requiresVerification?: boolean }).requiresVerification);
-
-  logger.info("market catalog snapshot loaded", {
-    asOfDate: MARKET_SNAPSHOT_2026_06_12.asOfDate,
-    nextUpdateExpected: MARKET_SNAPSHOT_2026_06_12.nextUpdateExpected,
-    totalOffers: MARKET_SNAPSHOT_2026_06_12.offers.length,
-    totalSources: sources.length,
-    needsVerification: needsVerification.length,
-    sectionStats,
+seed()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error("Seed failed:", error);
+    process.exit(1);
   });
-}
-
-function printJson() {
-  console.log(JSON.stringify(MARKET_SNAPSHOT_2026_06_12, null, 2));
-}
-
-function main() {
-  const args = new Set(process.argv.slice(2));
-  if (args.has("--json")) {
-    printJson();
-    return;
-  }
-  printReadable();
-}
-
-main();
