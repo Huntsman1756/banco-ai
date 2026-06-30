@@ -1,5 +1,5 @@
-import { randomUUID } from "node:crypto";
-import { evaluatePdfUpload, type PdfGuardInput } from "../../domain/pdf-guard";
+﻿import { randomUUID } from "node:crypto";
+import { evaluatePdfUpload, type PdfGuardInput } from "../../domain/pdf-guard.js";
 
 type UploadRequest = {
   id: string;
@@ -130,7 +130,7 @@ export function queuePdfForProcessing(
     id: randomUUID(),
     createdAt: new Date(now).toISOString(),
     createdAtMs: now,
-    input,
+    input: { ...input, textSnippet: undefined },
     userId: options?.userId,
     action: guard.action,
     guardReasons: [...guard.reasons],
@@ -177,3 +177,4 @@ export function dequeueNextPdf(): UploadRequest | undefined {
 export function peekNextPdf(): UploadRequest | undefined {
   return uploadQueue[0];
 }
+

@@ -1,19 +1,19 @@
-import { logger } from "../../shared/logger";
+﻿import { logger } from "../../shared/logger.js";
 import {
   diffCatalogSnapshots,
   type CatalogDelta,
   type MarketSnapshotRecord,
   type OfferConditionSignal,
-} from "../../domain/market-change-detection";
+} from "../../domain/market-change-detection.js";
 import {
   buildHermesReviewPlan,
   type HermesReviewPlan,
   type HermesReviewSourceItem,
-} from "../../domain/hermes-review";
-import { getScrapeTargets } from "./source-manifest";
-import type { MarketScrapeTarget } from "../../data/market-snapshot-2026-06-12";
-import { fetchSourcePageText } from "./fetcher";
-import { extractSignalsFromText } from "./offer-extractor";
+} from "../../domain/hermes-review.js";
+import { getScrapeTargets } from "./source-manifest.js";
+import type { MarketScrapeTarget } from "../../data/market-snapshot-2026-06-12.js";
+import { fetchSourcePageText } from "./fetcher.js";
+import { extractSignalsFromText } from "./offer-extractor.js";
 import {
   buildCatalogSnapshot,
   loadLatestScrapeState,
@@ -21,8 +21,8 @@ import {
   persistScrapeState,
   type ScrapeRunState,
   type SourceScanSummary,
-} from "./state-store";
-import { getMarketOffers, MARKET_SNAPSHOT_2026_06_12 } from "../../data/market-snapshot-2026-06-12";
+} from "./state-store.js";
+import { getMarketOffers, MARKET_SNAPSHOT_2026_06_12 } from "../../data/market-snapshot-2026-06-12.js";
 
 export type ScraperCycleChange = {
   type:
@@ -75,12 +75,12 @@ const PRIORITY_RANK: Record<"high" | "medium" | "low", number> = {
 
 const UPDATED_SIGNAL_FOCUS: Record<OfferConditionSignal, string> = {
   financial_rate: "TAE y condiciones financieras",
-  bonus_or_campaign: "Bonificaciones / campaña de bienvenida",
-  payroll_requirement: "Requisito de nómina o ingresos recurrentes",
-  nomina_requirement: "Condición vinculada a nómina",
-  invoice_requirement: "Domiciliación de recibos",
+  bonus_or_campaign: "Bonificaciones / campaÃ±a de bienvenida",
+  payroll_requirement: "Requisito de nÃ³mina o ingresos recurrentes",
+  nomina_requirement: "CondiciÃ³n vinculada a nÃ³mina",
+  invoice_requirement: "DomiciliaciÃ³n de recibos",
   card_or_bizum: "Tarjeta o Bizum requerido",
-  bonus_term_limit: "Permanencia o penalización de cancelación",
+  bonus_term_limit: "Permanencia o penalizaciÃ³n de cancelaciÃ³n",
 };
 
 function sortByPriority<T extends { priority: "high" | "medium" | "low" }>(items: T[]): T[] {
@@ -104,7 +104,7 @@ function inferUpdatedProductPriority(signalDiffs: readonly OfferConditionSignal[
 
 function inferUpdatedProductFocus(signalDiffs: readonly OfferConditionSignal[] = []): string[] {
   if (signalDiffs.length === 0) {
-    return ["Revisión textual de condiciones comerciales y vigencia"];
+    return ["RevisiÃ³n textual de condiciones comerciales y vigencia"];
   }
   return Array.from(new Set(signalDiffs.map((signal) => UPDATED_SIGNAL_FOCUS[signal])));
 }
@@ -129,27 +129,27 @@ function inferSourceChangePriority(change: ScraperCycleChange): "high" | "medium
 function inferSourceChangeFocus(change: ScraperCycleChange): string[] {
   if (change.type === "source_error") {
     return [
-      "Revisión de estado HTTP y mensaje de error",
+      "RevisiÃ³n de estado HTTP y mensaje de error",
       "Comprobar robots.txt y posibles bloqueos de bot",
-      "Confirmar disponibilidad manual de la página",
+      "Confirmar disponibilidad manual de la pÃ¡gina",
     ];
   }
   if (change.type === "changed_source") {
     return [
       "Comparar contenido visible y detectar si el cambio es estructural o comercial",
-      "Verificar si el cambio afecta a condiciones de producto o a texto estático",
-      "Validar que no sea ruido del sitio (navegación/footer)",
+      "Verificar si el cambio afecta a condiciones de producto o a texto estÃ¡tico",
+      "Validar que no sea ruido del sitio (navegaciÃ³n/footer)",
     ];
   }
   if (change.type === "new_source") {
     return [
       "Confirmar que la URL es oficial y se corresponde con un producto",
-      "Asignar sección y cobertura de producto para evitar duplicados",
+      "Asignar secciÃ³n y cobertura de producto para evitar duplicados",
     ];
   }
   return [
-    "Verificar si el source desaparecido se consolidó en otro dominio o fue temporal",
-    "Registrar posible expiración y fallback disponible",
+    "Verificar si el source desaparecido se consolidÃ³ en otro dominio o fue temporal",
+    "Registrar posible expiraciÃ³n y fallback disponible",
   ];
 }
 
@@ -258,7 +258,7 @@ function catalogChangeToReviewItems(catalogDelta: CatalogDelta): ScraperManualRe
         section: change.section,
         reason: `Producto nuevo detectado: ${change.reason}`,
         priority,
-        focusAreas: ["TAE, límite, requisitos y bonificaciones iniciales"],
+        focusAreas: ["TAE, lÃ­mite, requisitos y bonificaciones iniciales"],
       });
       continue;
     }
@@ -272,7 +272,7 @@ function catalogChangeToReviewItems(catalogDelta: CatalogDelta): ScraperManualRe
         section: change.section,
         reason: `Producto desaparecido del catalogo: ${change.reason}`,
         priority: "low",
-        focusAreas: ["Comprobar si la retirada está comunicada oficialmente o es error de scrapeo"],
+        focusAreas: ["Comprobar si la retirada estÃ¡ comunicada oficialmente o es error de scrapeo"],
       });
       continue;
     }
@@ -324,7 +324,7 @@ function sourceChangeToReviewItems(sourceChanges: ScraperCycleChange[]): Scraper
       kind,
       section: "scraper",
       reason: normalizedReason.includes("source recovered after previous scrape failure")
-        ? "Revisión de recuperación tras error previo"
+        ? "RevisiÃ³n de recuperaciÃ³n tras error previo"
         : normalizedReason,
       priority: inferSourceChangePriority(change),
       focusAreas: inferSourceChangeFocus(change),
@@ -496,3 +496,5 @@ export async function runSchedulerScan(
     requiresManualReviewCount,
   };
 }
+
+

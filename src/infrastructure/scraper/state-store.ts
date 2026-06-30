@@ -1,8 +1,8 @@
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+﻿import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { createHash } from "node:crypto";
-import type { MarketOfferRecord, MarketSnapshotRecord } from "../../domain/market-change-detection";
-import type { HermesReviewPlan } from "../../domain/hermes-review";
+import type { MarketOfferRecord, MarketSnapshotRecord } from "../../domain/market-change-detection.js";
+import type { HermesReviewPlan } from "../../domain/hermes-review.js";
 
 export type SourceScanSummary = {
   sourceUrl: string;
@@ -61,3 +61,4 @@ export function buildCatalogSnapshot(offers: readonly MarketOfferRecord[], asOfD
     offers: [...offers],
   };
 }
+

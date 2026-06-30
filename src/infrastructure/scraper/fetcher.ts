@@ -1,4 +1,4 @@
-import { getRobotsRuleForUrl, isPathAllowedByRobots, stableHash } from "./robots";
+﻿import { getRobotsRuleForUrl, isPathAllowedByRobots, stableHash } from "./robots.js";
 
 export type ScrapeHttpResult = {
   url: string;
@@ -115,3 +115,4 @@ export async function fetchSourcePageText(url: string): Promise<ScrapeHttpResult
     };
   }
 }
+
