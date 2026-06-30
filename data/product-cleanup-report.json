@@ -1,0 +1,436 @@
+{
+  "generatedAt": "2026-06-26T00:00:00.000Z",
+  "summary": {
+    "totalProducts": 16,
+    "corruptedProductNames": 14,
+    "bankNormalizationNeeded": 5,
+    "anomalousTAEs": 4,
+    "hashCategoryLabels": 16,
+    "autoFixable": 3,
+    "needsManualReview": 13
+  },
+  "products": [
+    {
+      "id": "2164ddd0-a6d0-4673-9d3a-3188c0c2e288",
+      "bank": {
+        "current": "Cajamar",
+        "normalized": "Cajamar"
+      },
+      "productName": {
+        "current": "Cuenta Ahorro Wefferent Ahorra de forma Wefferent con una cuenta online sin comisiones ni gastos Consigue además, hasta un 1,76% TAE (1,75% TIN)(1) y retira tu dinero cuando lo necesites. Disfruta de una cuenta sin comisiones ni gastos. Retira tu dinero cuando lo necesites. Podrás disponer de tus ahorros sin penalizaciones. Totalmente online. Operativa desde tus dispositivos y nuestra App.",
+        "length": 328,
+        "suggested": "Cuenta Ahorro Cajamar",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 1.76,
+        "suggested": 1.76,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=c26a3e60eb26baf5...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas SIN condiciones\\Cajamar.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel"],
+      "risk": "low"
+    },
+    {
+      "id": "6fa46756-d9bf-4e3c-945c-78d1a881b39e",
+      "bank": {
+        "current": "N26",
+        "normalized": "N26"
+      },
+      "productName": {
+        "current": "Indicador de riesgo correspondiente a todas las cuentas N26. 1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 indicativo de mayor riesgo. Entidad adhereida al Fondo de Garantía de Depósitos Alemán... Ahorra con total flexibilidad",
+        "length": 433,
+        "suggested": "Cuenta de Ahorro N26",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 2.14,
+        "suggested": 2.14,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=8432de68c5466573...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas SIN condiciones\\n26.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel"],
+      "risk": "low"
+    },
+    {
+      "id": "69c1f4bd-d34c-4842-ba25-ea7bf328a1c4",
+      "bank": {
+        "current": "Pibank / Pichincha",
+        "normalized": "Pibank"
+      },
+      "productName": {
+        "current": "Indicador de riesgo relativo a la Cuenta Remunerada Pibank, Cuenta Nómina Pibank y Depósito Pibank 1 /6 Este número es indicativo del riesgo del producto, siendo 1 / 6 indicativo de menor riesgo y 6 / 6 de mayor riesgo... ALERTA DE LIQUIDEZ DEPÓSITO PIBANK...",
+        "length": 449,
+        "suggested": "Cuenta Remunerada Pibank",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 1.76,
+        "suggested": 1.76,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=838e8d4b31c92c50...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas SIN condiciones\\Pibank.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel", "bank_alias"],
+      "risk": "low"
+    },
+    {
+      "id": "b479a6e3-c004-45fc-979b-b3f2b89e99c3",
+      "bank": {
+        "current": "Pibank / Pichincha",
+        "normalized": "Pibank"
+      },
+      "productName": {
+        "current": "InicioParticularesAhorroCuenta Ahorro 1/ 6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo del menor riesgo y 6/6 del mayor riesgo. Entidad adherida al Fondo de Garantía de Depósitos de Entidades de Crédito de España...",
+        "length": 432,
+        "suggested": "Cuenta Ahorro Pibank",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 1.51,
+        "suggested": 1.51,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=3a018a83dfd8d162...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas SIN condiciones\\pichincha.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel", "bank_alias"],
+      "risk": "low"
+    },
+    {
+      "id": "18641ecb-a7d2-470b-8270-22ab36917cdb",
+      "bank": {
+        "current": "Wizink",
+        "normalized": "WiZink"
+      },
+      "productName": {
+        "current": "Indicador de riesgo del Depósito y de la Cuenta de Ahorro de WiZink. 1/6 Este número es indicativo del riesgo del producto siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. FONDO DE GARANTÍA: El banco está adscrito al Fondo de Garantía de Depósitos de Entidades de Crédito [RD 16/2011, de 14 de octubre]. Para depósitos en dinero. el importe garantizado es de 100.000€ por depositante en cada entidad de crédito. ALERTA DE LIQUIDEZ DEL DEPÓSITO WIZINK:",
+        "length": 441,
+        "suggested": "Cuenta de Ahorro WiZink",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 1.2,
+        "suggested": 1.2,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=68e548b8cf4d34de...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas SIN condiciones\\wizikin.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel", "bank_normalization"],
+      "risk": "low"
+    },
+    {
+      "id": "df2f9e87-f76b-477d-a37c-17ba847b84ad",
+      "bank": {
+        "current": "bankinter",
+        "normalized": "Bankinter"
+      },
+      "productName": {
+        "current": "Cuenta No-nómina Banca particulares Bankinter en familia Jóvenes Autónomos y colectivos Banca personal",
+        "length": 104,
+        "suggested": "Cuenta Remunerada Bankinter",
+        "needsManualReview": false
+      },
+      "tae": {
+        "current": 5,
+        "suggested": 5,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=ac7c75975b1a6f71...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\bankinter.txt",
+      "issues": ["corrupted_productName", "bank_normalization", "hash_categoryLabel", "high_tae"],
+      "risk": "medium",
+      "notes": "TAE 5% es alto pero plausible para cuenta con comisiones/vinculaciones. productName parece fragmento de menú, no nombre de producto."
+    },
+    {
+      "id": "b601705d-d282-4c41-9c62-9ae6446e44ec",
+      "bank": {
+        "current": "Cajamar",
+        "normalized": "Cajamar"
+      },
+      "productName": {
+        "current": "Indicador de la cuenta corriente 1/6 Este número es indicativo del riesgo del producto, siendo 1 / 6 indicativo de menor riesgo y 6 / 6 de mayor riesgo. Grupo Cooperativo Cajamar se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito Español...",
+        "length": 340,
+        "suggested": "Cuenta Online Cajamar",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 3,
+        "suggested": 3,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=1ab669a4830951d5...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\cajamar.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel"],
+      "risk": "low"
+    },
+    {
+      "id": "a26651f4-2282-4a1f-9c6e-68b1ee088d5f",
+      "bank": {
+        "current": "Globalcaja",
+        "normalized": "Globalcaja"
+      },
+      "productName": {
+        "current": "1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. La Entidad está adherida al Fondo de Garantía de Depósitos Español de Entidades de Crédito...",
+        "length": 371,
+        "suggested": "Cuenta Remunerada Globalcaja",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 19,
+        "suggested": null,
+        "needsVerification": true
+      },
+      "categoryLabel": {
+        "current": "firma=c06a43a2a29e160a...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\Globalcaja.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel", "extreme_tae"],
+      "risk": "critical",
+      "notes": "TAE 19% es claramente erróneo. Probablemente debería ser 1.9% o 2.9%. Requiere verificar PDF original."
+    },
+    {
+      "id": "a3d97e87-7a69-4837-bfbb-9c6f67f9c7d1",
+      "bank": {
+        "current": "ING",
+        "normalized": "ING"
+      },
+      "productName": {
+        "current": "1 /6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. ING BANK NV se encuentra adherido al Sistema de Garantía de Depósitos Holandés con una garantía de hasta 100.000€ por depositante...",
+        "length": 382,
+        "suggested": "Depósito Bienvenida ING",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 3,
+        "suggested": 3,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=58864a4ffe1a5e0a...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\ing.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel"],
+      "risk": "low"
+    },
+    {
+      "id": "433296bb-7dba-4495-91d4-33ef0394e2d9",
+      "bank": {
+        "current": "Kutxabank",
+        "normalized": "Kutxabank"
+      },
+      "productName": {
+        "current": "Cuenta Remunerada Cuenta Remunerada Kutxabank Hasta 2%",
+        "length": 54,
+        "suggested": "Cuenta Remunerada Kutxabank",
+        "needsManualReview": false
+      },
+      "tae": {
+        "current": 2,
+        "suggested": 2,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=668ea5e9192f65b5...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\Kutxabank.txt",
+      "issues": ["product_name_duplication", "hash_categoryLabel"],
+      "risk": "low",
+      "notes": "productName tiene duplicación ('Cuenta Remunerada' repetido). Se puede limpiar automáticamente."
+    },
+    {
+      "id": "29c7fabb-513d-415b-9422-a8ca1cb99db7",
+      "bank": {
+        "current": "march",
+        "normalized": "March"
+      },
+      "productName": {
+        "current": "Comienza el contenido principal 1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. Banca March se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito de España...",
+        "length": 385,
+        "suggested": "Cuenta Online Avantio March",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 202,
+        "suggested": null,
+        "needsVerification": true
+      },
+      "categoryLabel": {
+        "current": "firma=9cf051c049221508...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\march.txt",
+      "issues": ["corrupted_productName", "bank_normalization", "hash_categoryLabel", "parse_error_tae"],
+      "risk": "critical",
+      "notes": "TAE 202% es error de parsing manifiesto. Posible valor correcto: 2.02% o 2.12%. Source filename dice 'march' pero producto parece ser 'Cuenta Online Avantio'."
+    },
+    {
+      "id": "a3d4e93c-6624-414f-9f7d-0e6cb8867833",
+      "bank": {
+        "current": "N26",
+        "normalized": "N26"
+      },
+      "productName": {
+        "current": "Cámbiate de banco en minutos Abre tu cuenta N26 y mueve tus pagos recurrentes con un par de clics. Abrir una cuenta bancaria Para beneficiarte de esta oferta, tendrás que abrir una cuenta bancaria en N26. Después, podrás abrir una cuenta de Ahorro N26 independiente para ganar intereses mientras gestionas tu dinero...",
+        "length": 713,
+        "suggested": "Cuenta de Ahorro N26 Metal",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 2.14,
+        "suggested": 2.14,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=e2c0a5b70f462d94...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\n26.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel"],
+      "risk": "low"
+    },
+    {
+      "id": "efa349d4-7e54-45b8-b884-db2eb4b762b4",
+      "bank": {
+        "current": "Revolut",
+        "normalized": "Revolut"
+      },
+      "productName": {
+        "current": "Cuentas Remuneradas Obtén un 3,51 % TAE en Ahorros Es hora de poner en marcha el crecimiento de tu dinero. Abre una Cuenta Remunerada entre el 16 de junio de 2026 y el 16 de agosto de 2026 para beneficiarte de una tasa mejorada del 3,51 % TAE...",
+        "length": 938,
+        "suggested": "Cuenta Remunerada Revolut",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 3.51,
+        "suggested": 3.51,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=24dcc1922397cf10...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\revolut.txt",
+      "issues": ["corrupted_productName", "hash_categoryLabel", "anomalous_maxBalance"],
+      "risk": "medium",
+      "notes": "maxBalance=5 es imposible. maxBalance debería ser 25000 (matching promoción TAE 3.51% para importes hasta 25.000€). minBalance=16 parece error (probablemente 0)."
+    },
+    {
+      "id": "c8f5ab46-0a81-40a4-8ec3-a4771152a315",
+      "bank": {
+        "current": "sabadell",
+        "normalized": "Sabadell"
+      },
+      "productName": {
+        "current": "Indicador de riesgo aplicable a todas las cuentas. 1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. Banco de Sabadell, S.A. se encuentra adherido al Fondo Español de Garantía de Depósitos...",
+        "length": 387,
+        "suggested": "Cuenta Online Sabadell",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 19,
+        "suggested": null,
+        "needsVerification": true
+      },
+      "categoryLabel": {
+        "current": "firma=faa2563aa8d9b472...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\sabadell.txt",
+      "issues": ["corrupted_productName", "bank_normalization", "hash_categoryLabel", "extreme_tae"],
+      "risk": "critical",
+      "notes": "TAE 19% es claramente erróneo. Probablemente debería ser 1.9% o 2.9%. Requiere verificar PDF original."
+    },
+    {
+      "id": "29f8ad5c-bb26-42ab-96ca-32bc6adfc036",
+      "bank": {
+        "current": "trade republic",
+        "normalized": "Trade Republic"
+      },
+      "productName": {
+        "current": "3,04 % TAE sobre tu efectivo, ilimitado Activa el 3,04 % TAE sobre saldos de efectivo ilimitados, para nuevos clientes. Pagado mensualmente, en tu cuenta corriente con IBAN español. Flexibilidad total para retirar tus fondos en cualquier momento.",
+        "length": 396,
+        "suggested": "Cuenta Remunerada Trade Republic",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 3.04,
+        "suggested": 3.04,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=73d338b3e7c598c9...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\trade republic.txt",
+      "issues": ["corrupted_productName", "bank_normalization", "hash_categoryLabel"],
+      "risk": "low"
+    },
+    {
+      "id": "6346b5fe-ea4d-41b4-afc6-04722d8fdbf2",
+      "bank": {
+        "current": "wizkink",
+        "normalized": "WiZink"
+      },
+      "productName": {
+        "current": "Indicador de riesgo de la Cuenta de Alta Remuneración de Volkswagen Bank Indicador de Riesgo Cuenta de Alta Remuneracion VOLKSWAGEN BANK GmbH S.E. se encuentra adherido al Fondo de Garantía de Depósitos Alemán con una garantía de hasta 100.000€ por depositante. Nueva Cuenta de Alta Remuneración de Volkswagen Bank Haz volar tu rentabilidad La Cuenta de Alta Remuneración de VW Bank es una buena opción para poner tu dinero en movimiento. Ábrela ahora de forma online y disfruta de todos sus beneficios con la garantía y el respaldo del banco del Grupo Volkswagen.",
+        "length": 597,
+        "suggested": "Cuenta de Alta Remuneración Volkswagen Bank",
+        "needsManualReview": true
+      },
+      "tae": {
+        "current": 2.8,
+        "suggested": 2.8,
+        "needsVerification": false
+      },
+      "categoryLabel": {
+        "current": "firma=c76dfa0f727dafde...",
+        "suggested": "Cuenta remunerada",
+        "isAutoFixable": true
+      },
+      "sourceUrl": "file://docs\\Cuentas remuneradas CON condiciones\\wizkink.txt",
+      "issues": ["corrupted_productName", "bank_normalization", "hash_categoryLabel"],
+      "risk": "low"
+    }
+  ]
+}

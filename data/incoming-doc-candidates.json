@@ -1,0 +1,352 @@
+{
+  "generatedAt": "2026-06-18T06:03:57.867Z",
+  "sourceDir": "docs/Cuentas remuneradas SIN condiciones",
+  "totalCandidates": 7,
+  "reviewedRequired": 0,
+  "skippedDocuments": [
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\2024-07-01-informacion-precontractual-cuenta-remunerada.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\Bases_legales_Cuenta_2porCiento.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\Cuenta-Contigo-v4.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\informacion_precontractual_cuenta_ahorro_self.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\informacion_precontractual_cuenta_remunerada.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    }
+  ],
+  "candidates": [
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\Cajamar.txt",
+      "sourceKind": "txt",
+      "bankHint": "Cajamar",
+      "productNameHint": "Cuenta Ahorro Wefferent Ahorra de forma Wefferent con una cuenta online sin comisiones ni gastos Consigue además, hasta un 1,76% TAE (1,75% TIN)(1) y retira tu dinero cuando lo necesites. Disfruta de una cuenta sin comisiones ni gastos. Retira tu dinero cuando lo necesites. Podrás disponer de tus ahorros sin penalizaciones. Totalmente online. Operativa desde tus dispositivos y nuestra App.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        1.76,
+        1.75,
+        1.64,
+        1
+      ],
+      "minBalance": 0,
+      "maxBalance": null,
+      "hasNoLimit": true,
+      "hasNoConditions": false,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": true,
+        "hasTarjeta": true,
+        "hasBizum": false
+      },
+      "excerpt": "Cuenta Ahorro Wefferent\r\nAhorra de forma Wefferent con una cuenta online sin comisiones ni gastos\r\nConsigue además, hasta un 1,76% TAE (1,75% TIN)(1) y retira tu dinero cuando lo necesites.\r\n\r\n\r\n\r\nDisfruta de una cuenta sin comisiones ni gastos.\r\n\r\n\r\nRetira tu dinero cuando lo necesites. Podrás disponer de tus ahorros sin penalizaciones.\r\n\r\n\r\nTotalmente online. Operativa desde tus dispositivos y nuestra App.\r\n\r\n\r\nTú eliges cuánto quieres ahorrar y en qué m",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 3381,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin comisiones",
+        "sin limite",
+        "tarjeta",
+        "recibos",
+        "nomina",
+        "tae",
+        "tae:1.76",
+        "tae:1.75",
+        "tae:1.64"
+      ],
+      "textFingerprint": "c26a3e60eb26baf5be6089f0af486b8804f8d4f630550e3e6f492e52c088dfa3"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\ing.txt",
+      "sourceKind": "txt",
+      "bankHint": "ING",
+      "productNameHint": "1 /6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. ING BANK NV se encuentra adherido al Sistema de Garantía de Depósitos Holandés con una garantía de hasta 100.000€ por depositante. Alertas de liquidez para el Depósito Bienvenida El reembolso, rescate o la devolución anticipada de una parte o de todo el principal invertido están sujetos a comisiones o penalizaciones. Ábrela ahora y disfruta del Depósito Bienvenida",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        3,
+        2.967,
+        1,
+        0.995,
+        0.87,
+        0.868,
+        0.3
+      ],
+      "minBalance": 0.3,
+      "maxBalance": null,
+      "hasNoLimit": false,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": true,
+        "hasTarjeta": false,
+        "hasBizum": false
+      },
+      "excerpt": "1 /6\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.\r\nING BANK NV se encuentra adherido al Sistema de Garantía de Depósitos Holandés con una garantía de hasta 100.000€ por depositante.\r\n\r\nAlertas de liquidez para el Depósito Bienvenida\r\n El reembolso, rescate o la devolución anticipada de una parte o de todo el principal invertido están sujetos a comisiones o penalizaciones.\r\nÁbrela ahora y d",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 7334,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin condiciones",
+        "sin comisiones",
+        "recibos",
+        "nomina",
+        "domiciliacion",
+        "tae",
+        "tae:3",
+        "tae:2.967",
+        "tae:1"
+      ],
+      "textFingerprint": "1d5fb758a5ceda488887ac9fb5dee1cfe2c69b54fb4bdc2058b63e5c81d5b571"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\n26.txt",
+      "sourceKind": "txt",
+      "bankHint": "N26",
+      "productNameHint": "Indicador de riesgo correspondiente a todas las cuentas N26. 1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 indicativo de mayor riesgo. Entidad adherida al Fondo de Garantía de Depósitos Alemán. El fondo garantiza los depósitos de dinero hasta 100.000 euros por titular de la Unión Europea y entidad. Una mujer con el cabello pelirrojo recogido en una coleta sostiene un teléfono inteligente mientras está de pie cerca de un paso de peatones en una ciudad con edificios de oficinas modernos. Ahorra con total flexibilidad",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        2.14,
+        1.5,
+        1.3,
+        0.5
+      ],
+      "minBalance": 0,
+      "maxBalance": null,
+      "hasNoLimit": true,
+      "hasNoConditions": false,
+      "feesDetected": true,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": true,
+        "hasBizum": false
+      },
+      "excerpt": "Indicador de riesgo correspondiente a todas las cuentas N26.\r\n1/6\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 indicativo de mayor riesgo.\r\nEntidad adherida al Fondo de Garantía de Depósitos Alemán. El fondo garantiza los depósitos de dinero hasta 100.000 euros por titular de la Unión Europea y entidad.\r\nUna mujer con el cabello pelirrojo recogido en una coleta sostiene un teléfono inteligente mientras est",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 6301,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": false,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin limite",
+        "tarjeta",
+        "tae",
+        "tae:2.14",
+        "tae:1.5",
+        "tae:1.3"
+      ],
+      "textFingerprint": "8432de68c5466573fc2e9d1663beac885c5be183834941d903fba03ca3b5304e"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\Pibank.txt",
+      "sourceKind": "txt",
+      "bankHint": "Pibank / Pichincha",
+      "productNameHint": "Indicador de riesgo relativo a la Cuenta Remunerada Pibank, Cuenta Nómina Pibank y Depósito Pibank 1 /6 Este número es indicativo del riesgo del producto, siendo 1 / 6 indicativo de menor riesgo y 6 / 6 de mayor riesgo. Banco Pichincha España S.A, titular de la marca comercial Pibank, está adherido al Fondo de Garantía de Depósitos de Entidades de Crédito de España. El fondo garantiza los depósitos de dinero hasta 100.000 euros por titular y entidad. ALERTA DE LIQUIDEZ DEPÓSITO PIBANK El reembolso, rescate o la devolución anticipada de una parte o de todo el principal invertido están sujetos a comisiones o penalizaciones.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        1.76,
+        1.75
+      ],
+      "minBalance": 0,
+      "maxBalance": null,
+      "hasNoLimit": true,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": true,
+        "hasTarjeta": true,
+        "hasBizum": false
+      },
+      "excerpt": "Indicador de riesgo relativo a la Cuenta Remunerada Pibank, Cuenta Nómina Pibank y Depósito Pibank\r\n\r\n1 /6\r\nEste número es indicativo del riesgo del producto, siendo 1 / 6 indicativo de menor riesgo y 6 / 6 de mayor riesgo.\r\n\r\nBanco Pichincha España S.A, titular de la marca comercial Pibank, está adherido al Fondo de Garantía de Depósitos de Entidades de Crédito de España. El fondo garantiza los depósitos de dinero hasta 100.000 euros por titular y entidad",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 7753,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin condiciones",
+        "sin comisiones",
+        "sin limite",
+        "tarjeta",
+        "recibos",
+        "nomina",
+        "domiciliacion",
+        "transferencias",
+        "tae",
+        "tae:1.76",
+        "tae:1.75"
+      ],
+      "textFingerprint": "838e8d4b31c92c50f7a26142d7d30d927343f12f0cf381493d04d6d7a32027e7"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\pichincha.txt",
+      "sourceKind": "txt",
+      "bankHint": "Pibank / Pichincha",
+      "productNameHint": "InicioParticularesAhorroCuenta Ahorro 1/ 6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo del menor riesgo y 6/6 del mayor riesgo. Entidad adherida al Fondo de Garantía de Depósitos de Entidades de Crédito Español. Para depósitos en dinero, el importe garantizado es de 100.000€ por depositante en cada entidad de crédito. Rentabilidad sin condiciones Con nuestra Cuenta Ahorro, recibe una remuneración del 1,51% TAE* desde el primer euro. Ábrela online en minutos y olvídate de las vinculaciones y las comisiones.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        1.51,
+        1.5
+      ],
+      "minBalance": 0.01,
+      "maxBalance": 1000,
+      "hasNoLimit": false,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": true,
+        "hasBizum": true
+      },
+      "excerpt": "InicioParticularesAhorroCuenta Ahorro\r\n\r\n1/ 6\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo del menor riesgo y 6/6 del mayor riesgo.\r\n\r\nEntidad adherida al Fondo de Garantía de Depósitos de Entidades de Crédito Español. Para depósitos en dinero, el importe garantizado es de 100.000€ por depositante en cada entidad de crédito.\r\n\r\nRentabilidad sin condiciones\r\nCon nuestra Cuenta Ahorro, recibe una remuneración del 1,51% TAE* desde",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 2954,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin condiciones",
+        "sin comisiones",
+        "tarjeta",
+        "nomina",
+        "domiciliacion",
+        "bizum",
+        "transferencias",
+        "tae",
+        "tae:1.51",
+        "tae:1.5"
+      ],
+      "textFingerprint": "3a018a83dfd8d1622fb743f5c2ac648e6d350000b90fae284a75cc6577144c02"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\revolut.txt",
+      "sourceKind": "txt",
+      "bankHint": "Revolut",
+      "productNameHint": "Cuentas Remuneradas Obtén un 3,51 % TAE en Ahorros Es hora de poner en marcha el crecimiento de tu dinero. Abre una Cuenta Remunerada entre el 16 de junio de 2026 y el 16 de agosto de 2026 para beneficiarte de una tasa mejorada del 3,51 % TAE. Más información La oferta de 3,51 % TAE es una promoción por tiempo limitado para los nuevos clientes de Revolut. La promoción estará vigente desde el 16 de junio de 2026 hasta el 16 de agosto de 2026. Los clientes que cumplan los requisitos y abran una Cuenta Remunerada Personal durante este periodo disfrutarán de la oferta hasta el 16 de octubre de 2026. Esta tasa se aplicará a importes de hasta 25 000 €. Para importes superiores, se aplicará una tasa combinada entre la oferta y la tasa del plan correspondiente. Después del 16 de octubre de 2026, la tasa de tu Cuenta Remunerada volverá a ser la que determina tu plan, como se explica en la Información precontractual de la Cuenta Remunerada. Para más información, consulta los Términos y Condiciones de la Cuenta Remunerada - 2026. Servicios proporcionados por Revolut Bank UAB, Sucursal en España (código del Banco de España 1583). La cuenta remunerada es una cuenta de moneda escritural. El tipo de interés depende de tu plan, desde un 1,15 % TAE en nuestro plan Estándar hasta un 2,27 % TAE en nuestro plan Ultra. Mayores de 18 años. Ejemplo representativo: 100 € invertidos el 1 de enero a un 2,27 % TAE / 2,27 % TIN te darían 102,27 € de interés a fecha de 31 de diciembre, suponiendo que no se realicen recargas adicionales, retiradas o retenciones fiscales. Intereses liquidados a diario. Sin comisiones de mantenimiento o cancelación. El plan Ultra está sujeto a una comisión mensual de 55 €. El importe máximo de depósito es de 5 000 000 €. Lee nuestros Términos y Condiciones para más información.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        3.51,
+        2.27,
+        1.15
+      ],
+      "minBalance": 16,
+      "maxBalance": 5,
+      "hasNoLimit": false,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": false,
+        "hasBizum": false
+      },
+      "excerpt": "Cuentas Remuneradas\r\n\r\nObtén un 3,51 % TAE en Ahorros\r\nEs hora de poner en marcha el crecimiento de tu dinero. Abre una Cuenta Remunerada entre el 16 de junio de 2026 y el 16 de agosto de 2026 para beneficiarte de una tasa mejorada del 3,51 % TAE.\r\n\r\nMás información\r\nLa oferta de 3,51 % TAE es una promoción por tiempo limitado para los nuevos clientes de Revolut. La promoción estará vigente desde el 16 de junio de 2026 hasta el 16 de agosto de 2026. Los cl",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 3520,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin comisiones",
+        "transferencias",
+        "tae",
+        "tae:3.51",
+        "tae:2.27",
+        "tae:1.15"
+      ],
+      "textFingerprint": "5ec715fa464668147ef1bf57bfa6ce9a865f7641decbd84c573eb1cb1408e4ce"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas SIN condiciones\\wizikin.txt",
+      "sourceKind": "txt",
+      "bankHint": "Wizink",
+      "productNameHint": "Indicador de riesgo del Depósito y de la Cuenta de Ahorro de WiZink. 1/6 Este número es indicativo del riesgo del producto siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. FONDO DE GARANTÍA: El banco está adscrito al Fondo de Garantía de Depósitos de Entidades de Crédito [RD 16/2011, de 14 de octubre]. Para depósitos en dinero. el importe garantizado es de 100.000€ por depositante en cada entidad de crédito. ALERTA DE LIQUIDEZ DEL DEPÓSITO WIZINK:",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        1.2,
+        1.193
+      ],
+      "minBalance": 0,
+      "maxBalance": null,
+      "hasNoLimit": true,
+      "hasNoConditions": false,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": false,
+        "hasTarjeta": false,
+        "hasBizum": false
+      },
+      "excerpt": "Indicador de riesgo del Depósito y de la Cuenta de Ahorro de WiZink.\r\n\r\n1/6\r\nEste número es indicativo del riesgo del producto siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.\r\n\r\nFONDO DE GARANTÍA:\r\n\r\nEl banco está adscrito al Fondo de Garantía de Depósitos de Entidades de Crédito [RD 16/2011, de 14 de octubre]. Para depósitos en dinero. el importe garantizado es de 100.000€ por depositante en cada entidad de crédito.\r\n\r\nALERTA DE LIQUIDEZ DEL ",
+      "confidence": 0.87,
+      "reviewedRequired": false,
+      "textLength": 2733,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": false,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin comisiones",
+        "sin limite",
+        "nomina",
+        "tae",
+        "tae:1.2",
+        "tae:1.193"
+      ],
+      "textFingerprint": "68e548b8cf4d34dec0cc6497fe329f5c2227ca94708c2beae7b82df43e52be56"
+    }
+  ]
+}

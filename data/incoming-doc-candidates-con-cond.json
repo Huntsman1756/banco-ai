@@ -1,0 +1,570 @@
+{
+  "generatedAt": "2026-06-18T06:03:57.935Z",
+  "sourceDir": "docs/Cuentas remuneradas CON condiciones",
+  "totalCandidates": 11,
+  "reviewedRequired": 0,
+  "skippedDocuments": [
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\2024-07-01-informacion-precontractual-cuenta-remunerada.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\301_027_001_Cuenta_Remunerada_Openbank.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\Bases_CSuma_Cetelem_CashbackTarjeta.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\Bases_legales_Cuenta_2porCiento.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\condiciones-generales-contratacion-cuenta-online-unicaja-banco.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\DIC-CA.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\FIPRE CTA CTE DIGITAL.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\FIPRE-Abril-2026.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\fipre-cuenta-clara-remunerada-2por-es-1e56cd11.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\informacion_precontractual_cuenta_ahorro_self.pdf",
+      "sourceKind": "pdf",
+      "reason": "too_little_text",
+      "detail": "PDF text extraction did not produce usable text"
+    }
+  ],
+  "candidates": [
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\bankinter.txt",
+      "sourceKind": "txt",
+      "bankHint": "bankinter",
+      "productNameHint": "Cuenta No-nómina Banca particulares Bankinter en familia Jóvenes Autónomos y colectivos Banca personal",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        5,
+        4.94,
+        2,
+        1.99,
+        0
+      ],
+      "minBalance": 0.5,
+      "maxBalance": 10000,
+      "hasNoLimit": false,
+      "hasNoConditions": false,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": true,
+        "hasTarjeta": true,
+        "hasBizum": true
+      },
+      "excerpt": "Cuenta No-nómina\r\nBanca particulares\r\nBankinter en familia\r\nJóvenes\r\nAutónomos y colectivos\r\nBanca personal\r\nBanca Patrimonial\r\nExtranjeros y expat.\r\nContenido principal de la web\r\nSolo para las cuentas\r\n1 /6\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.\r\nBankinter está adherido al Fondo de Garantía de depósitos de Entidades de Crédito de España con garantía de 100.000€ por depositante y en",
+      "confidence": 0.96,
+      "reviewedRequired": false,
+      "textLength": 7516,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin comisiones",
+        "tarjeta",
+        "nomina",
+        "bizum",
+        "transferencias",
+        "tae",
+        "tae:5",
+        "tae:4.94",
+        "tae:2"
+      ],
+      "textFingerprint": "ac7c75975b1a6f7159870754e98a5586664119adaeb9f2476a26dc0c9346142f"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\cajamar.txt",
+      "sourceKind": "txt",
+      "bankHint": "Cajamar",
+      "productNameHint": "Indicador de la cuenta corriente 1/6 Este número es indicativo del riesgo del producto, siendo 1 / 6 indicativo de menor riesgo y 6 / 6 de mayor riesgo. Grupo Cooperativo Cajamar se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito Español. La cantidad máxima garantizada actualmente por el mencionado Fondo es de 100.000 euros por depositante. Abrir Cuenta Online Llévate hasta 1.500€",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        3,
+        1.52,
+        0
+      ],
+      "minBalance": 0,
+      "maxBalance": 50000,
+      "hasNoLimit": false,
+      "hasNoConditions": false,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": true,
+        "hasTarjeta": true,
+        "hasBizum": true
+      },
+      "excerpt": "Indicador de la cuenta corriente\r\n\r\n1/6\r\nEste número es indicativo del riesgo del producto, siendo 1 / 6 indicativo de menor riesgo y 6 / 6 de mayor riesgo.\r\n\r\nGrupo Cooperativo Cajamar se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito Español. La cantidad máxima garantizada actualmente por el mencionado Fondo es de 100.000 euros por depositante.\r\n\r\nAbrir Cuenta Online\r\nLlévate hasta 1.500€\r\nHasta 750 € de remuneración los 6 p",
+      "confidence": 0.96,
+      "reviewedRequired": false,
+      "textLength": 5125,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin comisiones",
+        "tarjeta",
+        "recibos",
+        "nomina",
+        "domiciliacion",
+        "bizum",
+        "transferencias",
+        "tae",
+        "tae:3",
+        "tae:1.52",
+        "tae:0"
+      ],
+      "textFingerprint": "1ab669a4830951d566a908d92014f2f6d961f0c3b4b1ffb3160224a43dbc8090"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\Globalcaja.txt",
+      "sourceKind": "txt",
+      "bankHint": "Globalcaja",
+      "productNameHint": "1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. La Entidad está adherida al Fondo de Garantía de Depósitos Español de Entidades de Crédito. El Fondo garantiza los depósitos en dinero hasta 100.000 euros, por titular y entidad. Este indicador de riesgo afecta a todas las cuentas y libretas detalladas en esta página. HAZTE CLIENTE ONLINE sin complicaciones... Descubre todas las ventajas de la Cuenta Online, exclusiva para nuevos clientes:",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        19,
+        2,
+        1.99
+      ],
+      "minBalance": 0,
+      "maxBalance": 100000,
+      "hasNoLimit": false,
+      "hasNoConditions": false,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": false,
+        "hasTarjeta": true,
+        "hasBizum": true
+      },
+      "excerpt": "1/6\r\n\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.\r\n\r\nLa Entidad está adherida al Fondo de Garantía de Depósitos Español de Entidades de Crédito. El Fondo garantiza los depósitos en dinero hasta 100.000 euros, por titular y entidad.\r\n\r\nEste indicador de riesgo afecta a todas las cuentas y libretas detalladas en esta página.\r\nHAZTE CLIENTE ONLINE sin complicaciones...\r\nDescubre todas las ve",
+      "confidence": 0.96,
+      "reviewedRequired": false,
+      "textLength": 5604,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin comisiones",
+        "tarjeta",
+        "nomina",
+        "domiciliacion",
+        "bizum",
+        "transferencias",
+        "tae",
+        "tae:19",
+        "tae:2",
+        "tae:1.99"
+      ],
+      "textFingerprint": "c06a43a2a29e160a87f283c99df18da006e3af82c29e91ec8ca3f72f11b28b25"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\ing.txt",
+      "sourceKind": "txt",
+      "bankHint": "ING",
+      "productNameHint": "1 /6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. ING BANK NV se encuentra adherido al Sistema de Garantía de Depósitos Holandés con una garantía de hasta 100.000€ por depositante. Alertas de liquidez para el Depósito Bienvenida El reembolso, rescate o la devolución anticipada de una parte o de todo el principal invertido están sujetos a comisiones o penalizaciones. Ábrela ahora y disfruta del Depósito Bienvenida",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        3,
+        2.967,
+        1,
+        0.995,
+        0.87,
+        0.868,
+        0.3
+      ],
+      "minBalance": 0.3,
+      "maxBalance": null,
+      "hasNoLimit": false,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": true,
+        "hasTarjeta": false,
+        "hasBizum": false
+      },
+      "excerpt": "1 /6\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.\r\nING BANK NV se encuentra adherido al Sistema de Garantía de Depósitos Holandés con una garantía de hasta 100.000€ por depositante.\r\n\r\nAlertas de liquidez para el Depósito Bienvenida\r\n El reembolso, rescate o la devolución anticipada de una parte o de todo el principal invertido están sujetos a comisiones o penalizaciones.\r\nÁbrela ahora y d",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 7339,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin condiciones",
+        "sin comisiones",
+        "recibos",
+        "nomina",
+        "domiciliacion",
+        "tae",
+        "tae:3",
+        "tae:2.967",
+        "tae:1"
+      ],
+      "textFingerprint": "58864a4ffe1a5e0ab34ae80a134d226a1b32b7356bee5805f87d9fdf1d1e537d"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\Kutxabank.txt",
+      "sourceKind": "txt",
+      "bankHint": "Kutxabank",
+      "productNameHint": "Cuenta Remunerada Cuenta Remunerada Kutxabank Hasta 2%",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        2,
+        1.982,
+        0.5,
+        0.499
+      ],
+      "minBalance": 0,
+      "maxBalance": null,
+      "hasNoLimit": false,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": true,
+        "hasBizum": false
+      },
+      "excerpt": "Cuenta Remunerada\r\n\r\n \r\nCuenta\r\nRemunerada\r\nKutxabank\r\n\r\n \r\n\r\nHasta\r\n\r\n2%\r\n\r\nTAE(1)\r\nEL PRIMER\r\nAÑO.\r\n\r\n \r\n \r\n\r\nY, además, tarjeta Visa Debit Kutxabank\r\nsin comisiones(1)\r\n\r\nUna cuenta ideal para ti, que buscas rentabilidad\r\ny flexibilidad total, sin comisiones, sin condiciones.\r\nSólo para nuevos clientes digitales.\r\nContratable hasta el 31/07/2026.\r\n\r\n \r\n\r\nLA QUIERO\r\n\r\n \r\n\r\n¡Ven a Kutxabank y empieza a sumar\r\ncon la Cuenta Remunerada!\r\n\r\n \r\n\r\n\r\n\r\n100% dig",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 1753,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": false,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin condiciones",
+        "sin comisiones",
+        "tarjeta",
+        "tae",
+        "tae:2",
+        "tae:1.982",
+        "tae:0.5"
+      ],
+      "textFingerprint": "668ea5e9192f65b51dc25c3cb60310fe0fc02fa27761549b8fef6646e1c603ef"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\march.txt",
+      "sourceKind": "txt",
+      "bankHint": "march",
+      "productNameHint": "Comienza el contenido principal 1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. Banca March se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito de España. La cantidad máxima garantizada actualmente por el mencionado Fondo es de 100.000 euros por depositante. CUENTA ONLINE AVANTIO Una cuenta bancaria online para ahorrar",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        202,
+        173,
+        100,
+        43,
+        4.89,
+        2.02,
+        2,
+        1,
+        0
+      ],
+      "minBalance": 10000,
+      "maxBalance": 60000,
+      "hasNoLimit": false,
+      "hasNoConditions": false,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": true,
+        "hasTarjeta": true,
+        "hasBizum": false
+      },
+      "excerpt": "Comienza el contenido principal\r\n1/6\r\n\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.\r\n\r\nBanca March se encuentra adherido al Fondo de Garantía de Depósitos de Entidades de Crédito de España. La cantidad máxima garantizada actualmente por el mencionado Fondo es de 100.000 euros por depositante.\r\n\r\nCUENTA ONLINE AVANTIO\r\n\r\nUna cuenta bancaria online para ahorrar\r\nen tu día a día\r\nLa cuenta AV",
+      "confidence": 0.96,
+      "reviewedRequired": false,
+      "textLength": 8490,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin comisiones",
+        "tarjeta",
+        "nomina",
+        "domiciliacion",
+        "transferencias",
+        "tae",
+        "tae:202",
+        "tae:173",
+        "tae:100"
+      ],
+      "textFingerprint": "9cf051c049221508971c300f769d1977a4be33df6ac02d0c763a04b7e344037f"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\n26.txt",
+      "sourceKind": "txt",
+      "bankHint": "N26",
+      "productNameHint": "Cámbiate de banco en minutos Abre tu cuenta N26 y mueve tus pagos recurrentes con un par de clics. Abrir una cuenta bancaria Para beneficiarte de esta oferta, tendrás que abrir una cuenta bancaria en N26. Después, podrás abrir una cuenta de Ahorro N26 independiente para ganar intereses mientras gestionas tu dinero. N26 Bank SE, Sucursal en España con NIF W2765098E, es un establecimiento permanente en España de la entidad alemana N26 Bank SE, registrada en el Banco de España con el número de entidad 1563 y domicilio social en Calle de Don Ramón de la Cruz, 84, 28006, Madrid. La Cuenta de Ahorro N26 desde 0 euros y sin límite de importe. Consulta las condiciones en https://n26.com. 1 1,30 % TAE (1,50 % TIN anual) con N26 Metal. Con este tipo de interés, si mantienes un saldo diario de 100.000 € en tu Cuenta de Ahorro N26 Metal durante un periodo de 12 meses, obtendrás un interés bruto total de 1.500 € (coste anual de suscripción de 202,8 €). Liquidación mensual de intereses. Aplica a toda cantidad depositada en la cuenta de ahorro, sin límite máximo. Consulta las condiciones en Documentos legales.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        2.14,
+        1.5,
+        1.3,
+        0.5
+      ],
+      "minBalance": 0,
+      "maxBalance": null,
+      "hasNoLimit": true,
+      "hasNoConditions": false,
+      "feesDetected": true,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": false,
+        "hasBizum": true
+      },
+      "excerpt": "Cámbiate de banco en minutos\r\nAbre tu cuenta N26 y mueve tus pagos recurrentes con un par de clics.\r\nAbrir una cuenta bancaria\r\nPara beneficiarte de esta oferta, tendrás que abrir una cuenta bancaria en N26. Después, podrás abrir una cuenta de Ahorro N26 independiente para ganar intereses mientras gestionas tu dinero.\r\nN26 Bank SE, Sucursal en España con NIF W2765098E, es un establecimiento permanente en España de la entidad alemana N26 Bank SE, registrada",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 5042,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": false,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin limite",
+        "bizum",
+        "tae",
+        "tae:2.14",
+        "tae:1.5",
+        "tae:1.3"
+      ],
+      "textFingerprint": "e2c0a5b70f462d9480dd65ee1ae9ddcb4cbda586a66bdea8b9d3bfcef072cf7e"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\revolut.txt",
+      "sourceKind": "txt",
+      "bankHint": "Revolut",
+      "productNameHint": "Cuentas Remuneradas Obtén un 3,51 % TAE en Ahorros Es hora de poner en marcha el crecimiento de tu dinero. Abre una Cuenta Remunerada entre el 16 de junio de 2026 y el 16 de agosto de 2026 para beneficiarte de una tasa mejorada del 3,51 % TAE. Más información La oferta de 3,51 % TAE es una promoción por tiempo limitado para los nuevos clientes de Revolut. La promoción estará vigente desde el 16 de junio de 2026 hasta el 16 de agosto de 2026. Los clientes que cumplan los requisitos y abran una Cuenta Remunerada Personal durante este periodo disfrutarán de la oferta hasta el 16 de octubre de 2026. Esta tasa se aplicará a importes de hasta 25 000 €. Para importes superiores, se aplicará una tasa combinada entre la oferta y la tasa del plan correspondiente. Después del 16 de octubre de 2026, la tasa de tu Cuenta Remunerada volverá a ser la que determina tu plan, como se explica en la Información precontractual de la Cuenta Remunerada. Para más información, consulta los Términos y Condiciones de la Cuenta Remunerada - 2026. Servicios proporcionados por Revolut Bank UAB, Sucursal en España (código del Banco de España 1583). La cuenta remunerada es una cuenta de moneda escritural. El tipo de interés depende de tu plan, desde un 1,15 % TAE en nuestro plan Estándar hasta un 2,27 % TAE en nuestro plan Ultra. Mayores de 18 años. Ejemplo representativo: 100 € invertidos el 1 de enero a un 2,27 % TAE / 2,27 % TIN te darían 102,27 € de interés a fecha de 31 de diciembre, suponiendo que no se realicen recargas adicionales, retiradas o retenciones fiscales. Intereses liquidados a diario. Sin comisiones de mantenimiento o cancelación. El plan Ultra está sujeto a una comisión mensual de 55 €. El importe máximo de depósito es de 5 000 000 €. Lee nuestros Términos y Condiciones para más información.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        3.51,
+        2.27,
+        1.15
+      ],
+      "minBalance": 16,
+      "maxBalance": 5,
+      "hasNoLimit": false,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": false,
+        "hasBizum": false
+      },
+      "excerpt": "Cuentas Remuneradas\r\n\r\nObtén un 3,51 % TAE en Ahorros\r\nEs hora de poner en marcha el crecimiento de tu dinero. Abre una Cuenta Remunerada entre el 16 de junio de 2026 y el 16 de agosto de 2026 para beneficiarte de una tasa mejorada del 3,51 % TAE.\r\n\r\nMás información\r\nLa oferta de 3,51 % TAE es una promoción por tiempo limitado para los nuevos clientes de Revolut. La promoción estará vigente desde el 16 de junio de 2026 hasta el 16 de agosto de 2026. Los cl",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 3539,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin comisiones",
+        "transferencias",
+        "tae",
+        "tae:3.51",
+        "tae:2.27",
+        "tae:1.15"
+      ],
+      "textFingerprint": "24dcc1922397cf10db3fc6d8d304320de6ffa28145d45b4acacd6d8340cefe5a"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\sabadell.txt",
+      "sourceKind": "txt",
+      "bankHint": "sabadell",
+      "productNameHint": "Indicador de riesgo aplicable a todas las cuentas. 1/6 Este número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo. Banco de Sabadell, S.A. se encuentra adherido al Fondo Español de Garantía de Depósitos de Entidades de Crédito. La cantidad máxima garantizada actualmente por el mencionado fondo es de 100.000€ por depositante. Cuenta Online",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        19,
+        3,
+        2.019,
+        2.001,
+        2
+      ],
+      "minBalance": 0,
+      "maxBalance": null,
+      "hasNoLimit": true,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": true,
+        "requiresReceipts": true,
+        "hasTarjeta": true,
+        "hasBizum": true
+      },
+      "excerpt": "Indicador de riesgo aplicable a todas las cuentas.\r\n1/6\r\nEste número es indicativo del riesgo del producto, siendo 1/6 indicativo de menor riesgo y 6/6 de mayor riesgo.\r\nBanco de Sabadell, S.A. se encuentra adherido al Fondo Español de Garantía de Depósitos de Entidades de Crédito. La cantidad máxima garantizada actualmente por el mencionado fondo es de 100.000€ por depositante.\r\nCuenta\r\nOnline\r\nSabadell\r\nSigue sumando\r\nLlévate el primer año hasta\r\n1.400€\r",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 11027,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": true
+      },
+      "evidence": [
+        "sin condiciones",
+        "sin comisiones",
+        "sin limite",
+        "tarjeta",
+        "recibos",
+        "nomina",
+        "domiciliacion",
+        "bizum",
+        "transferencias",
+        "tae",
+        "tae:19",
+        "tae:3"
+      ],
+      "textFingerprint": "faa2563aa8d9b4723366b3286018685a324889dfda16d548e47b9db09277e88b"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\trade republic.txt",
+      "sourceKind": "txt",
+      "bankHint": "trade republic",
+      "productNameHint": "3,04 % TAE sobre tu efectivo, ilimitado Activa el 3,04 % TAE sobre saldos de efectivo ilimitados, para nuevos clientes. Pagado mensualmente, en tu cuenta corriente con IBAN español. Flexibilidad total para retirar tus fondos en cualquier momento. //images.ctfassets.net/vkizfq3pbtzc/PSxMvbbiTwsil90UmxDFg/c9575a8255dc28743708180ea27ae52d/ECB_3-_Static_900x1200_ES.png La remuneración más justa para tu efectivo Activa el 3,04 % TAE sobre saldos de efectivo ilimitados, para nuevos clientes. Flexibilidad total para ingresar y retirar dinero en cualquier momento.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        3.04
+      ],
+      "minBalance": 0,
+      "maxBalance": 100000,
+      "hasNoLimit": false,
+      "hasNoConditions": false,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": true,
+        "hasBizum": false
+      },
+      "excerpt": "3,04 % TAE sobre tu efectivo, ilimitado\r\n\r\nActiva el 3,04 % TAE sobre saldos de efectivo ilimitados, para nuevos clientes. Pagado mensualmente, en tu cuenta corriente con IBAN español. Flexibilidad total para retirar tus fondos en cualquier momento.\r\n\r\n//images.ctfassets.net/vkizfq3pbtzc/PSxMvbbiTwsil90UmxDFg/c9575a8255dc28743708180ea27ae52d/ECB_3-_Static_900x1200_ES.png\r\nLa remuneración más justa para tu efectivo\r\n\r\nActiva el 3,04 % TAE sobre saldos de ef",
+      "confidence": 0.7,
+      "reviewedRequired": false,
+      "textLength": 1300,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": false,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "tarjeta",
+        "tae",
+        "tae:3.04"
+      ],
+      "textFingerprint": "73d338b3e7c598c962ed01164c1b73be2207cddbd65adb958979f73edb90b6f9"
+    },
+    {
+      "sourceFile": "docs\\Cuentas remuneradas CON condiciones\\wizkink.txt",
+      "sourceKind": "txt",
+      "bankHint": "wizkink",
+      "productNameHint": "Indicador de riesgo de la Cuenta de Alta Remuneración de Volkswagen Bank Indicador de Riesgo Cuenta de Alta Remuneracion VOLKSWAGEN BANK GmbH S.E. se encuentra adherido al Fondo de Garantía de Depósitos Alemán con una garantía de hasta 100.000€ por depositante. Nueva Cuenta de Alta Remuneración de Volkswagen Bank Haz volar tu rentabilidad La Cuenta de Alta Remuneración de VW Bank es una buena opción para poner tu dinero en movimiento. Ábrela ahora de forma online y disfruta de todos sus beneficios con la garantía y el respaldo del banco del Grupo Volkswagen.",
+      "productKind": "cuenta_remunerada",
+      "taeRates": [
+        2.8,
+        2.1,
+        1.9,
+        1.61,
+        1.094
+      ],
+      "minBalance": 2,
+      "maxBalance": null,
+      "hasNoLimit": true,
+      "hasNoConditions": true,
+      "feesDetected": false,
+      "flags": {
+        "requiresNomina": false,
+        "requiresReceipts": false,
+        "hasTarjeta": false,
+        "hasBizum": false
+      },
+      "excerpt": "Indicador de riesgo de la Cuenta de Alta Remuneración de Volkswagen Bank\r\nIndicador de Riesgo Cuenta de Alta Remuneracion\r\nVOLKSWAGEN BANK GmbH S.E. se encuentra adherido al Fondo de Garantía de Depósitos Alemán con una garantía de hasta 100.000€ por depositante.\r\nNueva Cuenta de Alta Remuneración de Volkswagen Bank\r\nHaz volar tu rentabilidad\r\n\r\nLa Cuenta de Alta Remuneración de VW Bank es una buena opción para poner tu dinero en movimiento. Ábrela ahora d",
+      "confidence": 1,
+      "reviewedRequired": false,
+      "textLength": 4164,
+      "extractedSignals": {
+        "hasRemunerationSignal": true,
+        "hasSpanishIbanSignal": false,
+        "hasTransferSignal": true,
+        "hasBonusSignal": false
+      },
+      "evidence": [
+        "sin condiciones",
+        "sin comisiones",
+        "transferencias",
+        "tae:2.8",
+        "tae:2.1",
+        "tae:1.9"
+      ],
+      "textFingerprint": "c76dfa0f727dafde4fbf1b320f2be8456d87cf27fe53d88332be553d66d04b35"
+    }
+  ]
+}

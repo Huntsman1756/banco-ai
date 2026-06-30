@@ -1,0 +1,168 @@
+{
+  "generatedAt": "2026-06-26T20:30:44.635Z",
+  "summary": {
+    "total": 19,
+    "pendingReview": 16,
+    "autoFixed": 1,
+    "needsManualReview": 15,
+    "bankNormalized": 7,
+    "productNameCleaned": 16,
+    "maxBalanceFixed": 1,
+    "categoryLabelNormalized": 16
+  },
+  "skippedProducts": [
+    {
+      "id": "2164ddd0-a6d0-4673-9d3a-3188c0c2e288",
+      "bank": "Cajamar",
+      "productName": "Cuenta Cajamar",
+      "tae": 1.76,
+      "notes": [
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "6fa46756-d9bf-4e3c-945c-78d1a881b39e",
+      "bank": "N26",
+      "productName": "Cuenta N26",
+      "tae": 2.14,
+      "notes": [
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "69c1f4bd-d34c-4842-ba25-ea7bf328a1c4",
+      "bank": "Pibank",
+      "productName": "Cuenta Pibank",
+      "tae": 1.76,
+      "notes": [
+        "productName requiere revisión manual",
+        "bank: Pibank / Pichincha → Pibank"
+      ]
+    },
+    {
+      "id": "b479a6e3-c004-45fc-979b-b3f2b89e99c3",
+      "bank": "Pibank",
+      "productName": "Cuenta Pibank",
+      "tae": 1.51,
+      "notes": [
+        "productName requiere revisión manual",
+        "bank: Pibank / Pichincha → Pibank"
+      ]
+    },
+    {
+      "id": "18641ecb-a7d2-470b-8270-22ab36917cdb",
+      "bank": "Wizink",
+      "productName": "Cuenta Wizink",
+      "tae": 1.2,
+      "notes": [
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "df2f9e87-f76b-477d-a37c-17ba847b84ad",
+      "bank": "Bankinter",
+      "productName": "Cuenta No-nómina Banca particulares",
+      "tae": 5,
+      "notes": [
+        "productName requiere revisión manual",
+        "bank: bankinter → Bankinter"
+      ]
+    },
+    {
+      "id": "b601705d-d282-4c41-9c62-9ae6446e44ec",
+      "bank": "Cajamar",
+      "productName": "Cuenta Cajamar",
+      "tae": 3,
+      "notes": [
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "a26651f4-2282-4a1f-9c6e-68b1ee088d5f",
+      "bank": "Globalcaja",
+      "productName": "Cuenta Globalcaja",
+      "tae": 19,
+      "notes": [
+        "TAE anómalo: 19%",
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "a3d97e87-7a69-4837-bfbb-9c6f67f9c7d1",
+      "bank": "ING",
+      "productName": "Cuenta ING",
+      "tae": 3,
+      "notes": [
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "29c7fabb-513d-415b-9422-a8ca1cb99db7",
+      "bank": "March",
+      "productName": "Cuenta March",
+      "tae": 202,
+      "notes": [
+        "TAE anómalo: 202%",
+        "productName requiere revisión manual",
+        "bank: march → March"
+      ]
+    },
+    {
+      "id": "a3d4e93c-6624-414f-9f7d-0e6cb8867833",
+      "bank": "N26",
+      "productName": "Cámbiate de banco en minutos Abre tu cuenta",
+      "tae": 2.14,
+      "notes": [
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "efa349d4-7e54-45b8-b884-db2eb4b762b4",
+      "bank": "Revolut",
+      "productName": "Cuenta Revolut",
+      "tae": 3.51,
+      "notes": [
+        "productName requiere revisión manual"
+      ]
+    },
+    {
+      "id": "c8f5ab46-0a81-40a4-8ec3-a4771152a315",
+      "bank": "Sabadell",
+      "productName": "Cuenta Sabadell",
+      "tae": 19,
+      "notes": [
+        "TAE anómalo: 19%",
+        "productName requiere revisión manual",
+        "bank: sabadell → Sabadell"
+      ]
+    },
+    {
+      "id": "29f8ad5c-bb26-42ab-96ca-32bc6adfc036",
+      "bank": "Trade Republic",
+      "productName": "Cuenta Trade Republic",
+      "tae": 3.04,
+      "notes": [
+        "productName requiere revisión manual",
+        "bank: trade republic → Trade Republic"
+      ]
+    },
+    {
+      "id": "6346b5fe-ea4d-41b4-afc6-04722d8fdbf2",
+      "bank": "WiZink",
+      "productName": "Cuenta WiZink",
+      "tae": 2.8,
+      "notes": [
+        "productName requiere revisión manual",
+        "bank: wizkink → WiZink"
+      ]
+    }
+  ],
+  "readyForApproval": [
+    {
+      "id": "433296bb-7dba-4495-91d4-33ef0394e2d9",
+      "bank": "Kutxabank",
+      "productName": "Cuenta Remunerada Kutxabank Hasta 2%",
+      "tae": 2
+    }
+  ]
+}

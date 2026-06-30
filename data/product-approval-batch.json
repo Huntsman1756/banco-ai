@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-06-26T21:00:00.000Z",
+  "approvals": [
+    {
+      "id": "433296bb-7dba-4495-91d4-33ef0394e2d9",
+      "action": "approve",
+      "updates": {
+        "productName": "Cuenta Remunerada Kutxabank",
+        "status": "approved",
+        "categoryLabel": "Cuenta remunerada"
+      },
+      "notes": "TAE 2% verificado en fuente original: Kutxabank.txt confirma '2% TAE durante 12 meses' con abono mensual, hasta 30.000€. Sin condiciones adicionales. Segundo año 0.50% TAE."
+    }
+  ],
+  "rejections": [],
+  "_summary": {
+    "total_approvals": 1,
+    "total_rejections": 0,
+    "tae_corrected_count": 0,
+    "note": "Único producto pending_review: Kutxabank con TAE 2% verificado. No se requieren correcciones de TAE."
+  }
+}
