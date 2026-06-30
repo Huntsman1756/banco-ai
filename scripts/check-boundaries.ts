@@ -8,8 +8,6 @@ const FORBIDDEN_IMPORTS = [
   "src/entrypoints/",
   "drizzle-orm",
   "pg",
-  "telegram",
-  "grammy",
   "hono",
 ];
 

@@ -1,8 +1,10 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { z } from "zod";
-import { getLlmConfig, generateStructuredJson } from "../src/infrastructure/llm/client";
+import { generateStructuredJson } from "../src/infrastructure/llm/client";
 import type { LlmValidationBlocked } from "../src/domain/financial-engine";
+
+const DEFAULT_REVIEW_MODEL = "gemma4";
 
 type ReviewOutput = {
   decision: "APPROVED" | "CHANGES_REQUIRED";
@@ -71,7 +73,7 @@ Return strict JSON only, matching this schema:
 Decision is CHANGES_REQUIRED if any blocker exists.
 Blockers must include mandatory failures, especially:
 - missing task context (Task id / Acceptance criteria / Files changed)
-- domain boundary issues (domain importing infra, db, web, telegram, llm)
+- domain boundary issues (domain importing infra, db, web, entrypoints, llm)
 - missing/incorrect LLM validation for internal business logic
 `;
 
@@ -79,7 +81,7 @@ async function buildFallbackReview(): Promise<ReviewOutput> {
   return {
     decision: "CHANGES_REQUIRED",
     blockers: ["No fue posible invocar Gemma4 o validar salida en JSON."],
-    should_fix: ["Verificar conectividad y configuración de OPENAI_BASE_URL/OPENAI_API_KEY"],
+    should_fix: ["Verificar conectividad y configuración de NAN_BASE_URL/NAN_API_KEY (fallback OPENAI_*)"],
     nits: [],
     evidence: ["scripts/review-with-gemma.ts"],
     final_recommendation: "Falla temporal en la revisión automática. Corrige la configuración LLM e intenta nuevamente.",
@@ -89,7 +91,7 @@ async function buildFallbackReview(): Promise<ReviewOutput> {
 async function run() {
   const packetPath = process.argv[2] ?? join(process.cwd(), ".agent", "review-packet.md");
   const packet = await readFile(packetPath, "utf8");
-  const config = getLlmConfig();
+  const reviewModel = process.env.NAN_REVIEW_MODEL ?? process.env.REVIEW_MODEL ?? DEFAULT_REVIEW_MODEL;
 
   const hasContext = packetHasContext(packet);
   const userPrompt = `\nReview packet:\n\n${packet}\n\n`;
@@ -99,7 +101,7 @@ async function run() {
     userPrompt,
     schema: Gemma4ReviewSchema,
     schemaName: "gemma4_review",
-    model: config.model,
+    model: reviewModel,
     maxRetries: 2,
     maxTokens: 1200,
   });

@@ -14,11 +14,15 @@
     "db:studio": "drizzle-kit studio --config drizzle.config.ts",
     "agent:loop": "tsx scripts/agent-loop.ts",
     "agent:review": "tsx scripts/review-with-gemma.ts",
-    "agent:repair": "tsx scripts/repair-loop.ts"
+    "agent:repair": "tsx scripts/repair-loop.ts",
+    "hermes:docs": "tsx scripts/hermes-doc-review.ts",
+    "import:conditions": "tsx scripts/import-conditions-docs.ts --include-pdfs",
+    "import:conditions:sin": "tsx scripts/import-conditions-docs.ts --include-pdfs --source-dir \"docs/Cuentas remuneradas SIN condiciones\" --output data/incoming-doc-candidates.json",
+    "import:conditions:con": "tsx scripts/import-conditions-docs.ts --include-pdfs --source-dir \"docs/Cuentas remuneradas CON condiciones\" --output data/incoming-doc-candidates-con-cond.json",
+    "import:conditions:pending": "tsx scripts/import-conditions-to-pending.ts --manifest data/incoming-doc-candidates.json"
   },
   "dependencies": {
     "drizzle-orm": "^0.45.2",
-    "grammy": "^1.44.0",
     "hono": "^4.9.4",
     "pg": "^8.16.3",
     "zod": "^4.4.3"

@@ -3,6 +3,9 @@ dist/
 .env
 .env.*
 !/.env.example
+!/.env.nan.example
+opencode.json
+.opencode.json
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
