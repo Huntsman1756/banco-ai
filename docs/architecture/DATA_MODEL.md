@@ -5,7 +5,6 @@ The canonical data model is in `docs/specs/2026-06-16-banco-ai-design.md` sectio
 Current canonical tables:
 
 - users
-- telegram_users
 - sources
 - scrape_runs
 - products

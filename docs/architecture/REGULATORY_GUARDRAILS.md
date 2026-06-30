@@ -32,7 +32,7 @@ Every user message must pass:
 3. if blocked: return refusal or educational-only path
 4. if allowed: continue comparison flow with deterministic ranking
 
-No route or Telegram handler may bypass this sequence.
+No route or background worker may bypass this sequence.
 
 ## Decision output from regulatory classification
 

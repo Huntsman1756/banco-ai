@@ -38,7 +38,6 @@ The MVP includes:
 - deterministic banking product ranking
 - regulatory blocking for investment-advice intents
 - web interface
-- Telegram bot
 - PDF comparison
 - scraper with manual review
 - admin dashboard
@@ -54,7 +53,6 @@ Files in `src/domain/` must never import from:
 - `src/infrastructure/`
 - `src/web/`
 - `src/entrypoints/`
-- Telegram SDKs
 - Hono
 - database clients
 - filesystem/network clients
@@ -202,6 +200,12 @@ docker compose config
 docker compose up --build
 ```
 
+## Channel scope
+
+Banco AI is web-only. Do not add bot runtimes, bot SDKs, bot-specific
+environment variables, or bot loop tasks without a new explicit scope decision,
+new queue tasks, and a database migration.
+
 ## Review model
 
 Use `gemma4` as constrained reviewer.
@@ -232,8 +236,23 @@ Per task:
 - max diff before mandatory review: 800 lines
 - max concurrent LLM calls: 3
 - max requests per minute per key: 60
+- max tokens per minute per model: 1.5M
+- builder model: `qwen3.6` (35B MoE, 3B active, FP8, 256K context)
+- reviewer model: `gemma4` (26B MoE, 4B active, FP8, 256K context)
+- reviewer concurrency: 1
+- builder concurrency: 2
+- default NAN sampling baseline: `temperature=0.6`, `top_p=0.95`
 
 If limits are hit, split task into smaller tasks.
+
+For unattended overnight Hermes loops, do not run whole-repo reviews, large PDF
+batches, or more than 3 total concurrent NAN calls. Stop and checkpoint rather
+than queueing work that would exceed the API-key or per-model budgets.
+
+All NAN API calls, including user-facing PDF/manual extraction, must go through
+`src/infrastructure/llm/client.ts` so the shared limiter can enforce
+concurrency, RPM, TPM, queue size, and queue timeout. Do not call NAN directly
+from routes, background workers, scrapers, or ad hoc scripts.
 
 ## Progress logs
 

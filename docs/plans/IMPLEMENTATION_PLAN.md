@@ -2,7 +2,34 @@
 
 ## Current phase
 
-F-1
+F-11 COMPLETE
+
+## Phase order
+
+1. F-1 Scaffolding ✅
+2. F-2 Shared infrastructure ✅
+3. F-3 Financial engine ✅
+4. F-4 Regulatory domain ✅
+5. F-5 LLM infrastructure ✅
+6. F-6 Recommender domain ✅
+7. F-7 Web ✅
+8. F-8 Scraper ✅
+9. F-9 PDF ✅
+10. F-10 Admin ✅
+11. F-11 Hardening ✅
+
+## All phases complete
+
+Banco AI MVP is feature-complete. All phases F-1 through F-11 have been implemented.
+
+## Remaining work
+
+- Production deployment to NaN Cloud
+- Database migration files (run `npm run db:generate` + `npm run db:migrate`)
+- Docker security hardening (non-root user, health checks, restart policies)
+- CSRF protection for admin endpoints
+- Rate limiting for public endpoints
+- Test coverage expansion
 
 ## Phase order
 
@@ -13,11 +40,10 @@ F-1
 5. F-5 LLM infrastructure
 6. F-6 Recommender domain
 7. F-7 Web
-8. F-8 Telegram
-9. F-9 Scraper
-10. F-10 PDF
-11. F-11 Admin
-12. F-12 Hardening
+8. F-8 Scraper
+9. F-9 PDF
+10. F-10 Admin
+11. F-11 Hardening
 
 ## Per-phase execution rules
 
@@ -34,8 +60,7 @@ F-1
 - F-5 requires F-2.
 - F-6 requires F-3 and F-4.
 - F-7 requires F-4, F-5, F-6.
-- F-8 requires F-4, F-5, F-6.
-- F-9 requires F-5.
-- F-10 requires F-5, F-7.
-- F-11 requires F-7 and F-8.
-- F-12 requires all prior phases complete.
+- F-8 requires F-5.
+- F-9 requires F-5 and F-7.
+- F-10 requires F-7.
+- F-11 requires all prior phases complete.

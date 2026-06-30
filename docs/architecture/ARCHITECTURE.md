@@ -2,7 +2,7 @@
 
 Banco AI is separated by responsibility layers:
 
-- `src/entrypoints/`: process entry files (web, telegram, scheduler).
+- `src/entrypoints/`: process entry files (web, scheduler).
 - `src/web/`: HTTP route orchestration and presentation layer.
 - `src/domain/`: pure, deterministic business logic and rules.
 - `src/infrastructure/`: adapters (LLM, storage, network, scraping).
@@ -12,7 +12,7 @@ Banco AI is separated by responsibility layers:
 The rule is strict:
 
 - Domain cannot import infrastructure, web, entrypoints, DB clients, network, filesystem, or LLM clients.
-- The same domain functions are used by web and Telegram and must be deterministic.
+- The same domain functions are used by web routes and background jobs and must be deterministic.
 
 Requests flow:
 
@@ -22,8 +22,7 @@ Requests flow:
 4. LLM is optionally used for explanation generation only after JSON validation.
 5. Results are logged and auditable.
 
-Deployment follows a single image with three run modes:
+Deployment follows a single image with two active run modes:
 
 - `node dist/entrypoints/web.js`
-- `node dist/entrypoints/telegram.js`
 - `node dist/entrypoints/scheduler.js`

@@ -18,9 +18,11 @@ Builder must generate `.agent/review-packet.md` with:
 ## Reviewer model constraints
 
 - model: `gemma4`
-- temperature: `0.2`
-- top_p: `0.9`
+- temperature: `0.6`
+- top_p: `0.95`
 - max concurrent calls: `1`
+- max review packet size: `40k tokens`
+- provider budget: share the API-key limit of `60 rpm`, `3 concurrent`, and `1.5M tpm` per model
 
 ## Review result format
 

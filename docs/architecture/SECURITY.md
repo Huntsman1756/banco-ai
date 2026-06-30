@@ -8,7 +8,6 @@
 - phone
 - uploaded PDF content
 - financial personal details
-- Telegram identifiers
 - session tokens
 - API keys
 
@@ -40,6 +39,7 @@
 - password hashing with bcrypt
 - rate limiting and request tracing
 
-## Telegram
+## Active channels
 
-- Admin identity is by numeric Telegram ID, never username.
+Only the web channel is active. Do not add bot-specific authentication or
+runtime secrets without a new architecture decision.
